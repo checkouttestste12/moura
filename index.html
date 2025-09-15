@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baterias Moura - Energia que move o Brasil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>MOURA</h1>
+                    <span class="tagline">Energia que move o Brasil</span>
+                </div>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Buscar baterias..." id="searchInput">
+                        <button type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar">
+                <h3>Filtros</h3>
+                <div class="filter-group">
+                    <h4>Por Amperagem</h4>
+                    <label><input type="checkbox" value="45"> 45 Ah</label>
+                    <label><input type="checkbox" value="60"> 60 Ah</label>
+                    <label><input type="checkbox" value="70"> 70 Ah</label>
+                    <label><input type="checkbox" value="100"> 100 Ah</label>
+                </div>
+                <div class="filter-group">
+                    <h4>Por Veículo</h4>
+                    <label><input type="checkbox" value="carro"> Carros de Passeio</label>
+                    <label><input type="checkbox" value="suv"> SUVs</label>
+                    <label><input type="checkbox" value="caminhao"> Caminhões</label>
+                    <label><input type="checkbox" value="moto"> Motos</label>
+                </div>
+                <div class="filter-group">
+                    <h4>Por Linha</h4>
+                    <label><input type="checkbox" value="efb"> EFB Start-Stop</label>
+                    <label><input type="checkbox" value="agm"> AGM</label>
+                    <label><input type="checkbox" value="clean"> Clean</label>
+                </div>
+            </aside>
+
+            <!-- Products Grid -->
+            <section class="products-section">
+                <div class="products-header">
+                    <h2>Nossas Baterias</h2>
+                    <div class="sort-options">
+                        <select id="sortSelect">
+                            <option value="relevance">Mais Relevantes</option>
+                            <option value="price-low">Menor Preço</option>
+                            <option value="price-high">Maior Preço</option>
+                            <option value="rating">Melhor Avaliação</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="products-grid" id="productsGrid">
+                    <!-- Product Card 1 -->
+                    <div class="product-card" data-category="carro suv" data-amperage="60" data-line="efb" data-price="499.90">
+                        <div class="product-image">
+                            <img src="assets/images/bateria-moura-1.jpg" alt="Bateria Moura M60RD">
+                            <div class="product-badges">
+                                <span class="badge original">Selo Original</span>
+                                <span class="badge guarantee">Garantia Estendida</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Moura M60RD</h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(247 avaliações)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-current">R$ 499,90</span>
+                                <span class="price-installment">10x de R$ 49,99 sem juros</span>
+                            </div>
+                            <ul class="product-specs">
+                                <li><strong>Tensão:</strong> 12V</li>
+                                <li><strong>Capacidade:</strong> 60 Ah</li>
+                                <li><strong>Aplicação:</strong> Carros de passeio, SUVs</li>
+                                <li><strong>Tecnologia:</strong> EFB Start-Stop</li>
+                            </ul>
+                            <div class="product-features">
+                                <span class="feature">Maior Durabilidade</span>
+                                <span class="feature">Tecnologia Anticorrosão</span>
+                            </div>
+                            <button class="btn-cta" onclick="redirectToProduct('moura-m60rd')">
+                                <i class="fas fa-shopping-cart"></i>
+                                Comprar Agora
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="product-card" data-category="carro suv" data-amperage="70" data-line="agm" data-price="649.90">
+                        <div class="product-image">
+                            <img src="assets/images/bateria-moura-2.jpg" alt="Bateria Moura M70KD">
+                            <div class="product-badges">
+                                <span class="badge original">Selo Original</span>
+                                <span class="badge premium">Premium AGM</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Moura M70KD</h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(189 avaliações)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-current">R$ 649,90</span>
+                                <span class="price-installment">12x de R$ 54,16 sem juros</span>
+                            </div>
+                            <ul class="product-specs">
+                                <li><strong>Tensão:</strong> 12V</li>
+                                <li><strong>Capacidade:</strong> 70 Ah</li>
+                                <li><strong>Aplicação:</strong> SUVs, Carros Premium</li>
+                                <li><strong>Tecnologia:</strong> AGM</li>
+                            </ul>
+                            <div class="product-features">
+                                <span class="feature">Máxima Performance</span>
+                                <span class="feature">Resistente a Vibrações</span>
+                            </div>
+                            <button class="btn-cta" onclick="redirectToProduct('moura-m70kd')">
+                                <i class="fas fa-shopping-cart"></i>
+                                Comprar Agora
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="product-card" data-category="caminhao" data-amperage="100" data-line="clean" data-price="899.90">
+                        <div class="product-image">
+                            <img src="assets/images/bateria-moura-3.webp" alt="Bateria Moura M100BD">
+                            <div class="product-badges">
+                                <span class="badge original">Selo Original</span>
+                                <span class="badge heavy-duty">Heavy Duty</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Moura M100BD</h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(156 avaliações)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-current">R$ 899,90</span>
+                                <span class="price-installment">12x de R$ 74,99 sem juros</span>
+                            </div>
+                            <ul class="product-specs">
+                                <li><strong>Tensão:</strong> 12V</li>
+                                <li><strong>Capacidade:</strong> 100 Ah</li>
+                                <li><strong>Aplicação:</strong> Caminhões, Veículos Pesados</li>
+                                <li><strong>Tecnologia:</strong> Clean Technology</li>
+                            </ul>
+                            <div class="product-features">
+                                <span class="feature">Extra Resistência</span>
+                                <span class="feature">Longa Vida Útil</span>
+                            </div>
+                            <button class="btn-cta" onclick="redirectToProduct('moura-m100bd')">
+                                <i class="fas fa-shopping-cart"></i>
+                                Comprar Agora
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="product-card" data-category="moto" data-amperage="45" data-line="clean" data-price="299.90">
+                        <div class="product-image">
+                            <img src="assets/images/bateria-moura-4.webp" alt="Bateria Moura MA45D">
+                            <div class="product-badges">
+                                <span class="badge original">Selo Original</span>
+                                <span class="badge moto">Para Motos</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Moura MA45D</h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="rating-count">(98 avaliações)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-current">R$ 299,90</span>
+                                <span class="price-installment">6x de R$ 49,98 sem juros</span>
+                            </div>
+                            <ul class="product-specs">
+                                <li><strong>Tensão:</strong> 12V</li>
+                                <li><strong>Capacidade:</strong> 45 Ah</li>
+                                <li><strong>Aplicação:</strong> Motos, Scooters</li>
+                                <li><strong>Tecnologia:</strong> Clean Technology</li>
+                            </ul>
+                            <div class="product-features">
+                                <span class="feature">Compacta e Eficiente</span>
+                                <span class="feature">Partida Rápida</span>
+                            </div>
+                            <button class="btn-cta" onclick="redirectToProduct('moura-ma45d')">
+                                <i class="fas fa-shopping-cart"></i>
+                                Comprar Agora
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 5 -->
+                    <div class="product-card" data-category="carro" data-amperage="60" data-line="efb" data-price="549.90">
+                        <div class="product-image">
+                            <img src="assets/images/bateria-moura-5.webp" alt="Bateria Moura M60GD">
+                            <div class="product-badges">
+                                <span class="badge original">Selo Original</span>
+                                <span class="badge eco">Eco Friendly</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Moura M60GD</h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(312 avaliações)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-current">R$ 549,90</span>
+                                <span class="price-installment">10x de R$ 54,99 sem juros</span>
+                            </div>
+                            <ul class="product-specs">
+                                <li><strong>Tensão:</strong> 12V</li>
+                                <li><strong>Capacidade:</strong> 60 Ah</li>
+                                <li><strong>Aplicação:</strong> Carros de passeio</li>
+                                <li><strong>Tecnologia:</strong> EFB Start-Stop</li>
+                            </ul>
+                            <div class="product-features">
+                                <span class="feature">Economia de Combustível</span>
+                                <span class="feature">Baixa Manutenção</span>
+                            </div>
+                            <button class="btn-cta" onclick="redirectToProduct('moura-m60gd')">
+                                <i class="fas fa-shopping-cart"></i>
+                                Comprar Agora
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 6 -->
+                    <div class="product-card" data-category="suv caminhao" data-amperage="70" data-line="clean" data-price="749.90">
+                        <div class="product-image">
+                            <img src="assets/images/bateria-moura-6.png" alt="Bateria Moura M70KD">
+                            <div class="product-badges">
+                                <span class="badge original">Selo Original</span>
+                                <span class="badge professional">Professional</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Moura M70KD</h3>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-count">(203 avaliações)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="price-current">R$ 749,90</span>
+                                <span class="price-installment">12x de R$ 62,49 sem juros</span>
+                            </div>
+                            <ul class="product-specs">
+                                <li><strong>Tensão:</strong> 12V</li>
+                                <li><strong>Capacidade:</strong> 70 Ah</li>
+                                <li><strong>Aplicação:</strong> SUVs, Caminhões Leves</li>
+                                <li><strong>Tecnologia:</strong> Clean Technology</li>
+                            </ul>
+                            <div class="product-features">
+                                <span class="feature">Alta Performance</span>
+                                <span class="feature">Garantia Estendida</span>
+                            </div>
+                            <button class="btn-cta" onclick="redirectToProduct('moura-m70kd-pro')">
+                                <i class="fas fa-shopping-cart"></i>
+                                Comprar Agora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sobre a Moura</h4>
+                    <p>Há mais de 60 anos fornecendo energia confiável para o Brasil.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Garantia e Segurança</h4>
+                    <div class="security-badges">
+                        <span class="security-badge">Garantia Estendida Moura</span>
+                        <span class="security-badge">Compra 100% Segura</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>SAC: 0800 701 2021</p>
+                    <p>contato@moura.com.br</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
